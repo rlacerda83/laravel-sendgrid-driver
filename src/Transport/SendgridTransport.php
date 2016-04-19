@@ -68,7 +68,7 @@ class SendgridTransport implements Swift_Transport
         $this->setSmtpApi($data, $message);
 
         $options = [
-            'headers' => ['Authorization' => 'Bearer ' . $this->api_key, 'Content-Type' => 'multipart/form-data']
+            'headers' => ['Authorization' => 'Bearer ' . $this->api_key]
         ];
 
         if (version_compare(ClientInterface::VERSION, '6') === 1) {
